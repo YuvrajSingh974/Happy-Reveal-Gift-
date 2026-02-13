@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Horror Intro</title>
+
+<style>
+body{
+  margin:0;
+  background:black;
+  color:white;
+  font-family:Courier New;
+  text-align:center;
+  overflow:hidden;
+}
+
+/* Horror flicker text */
+h1{
+  margin-top:200px;
+  color:red;
+  font-size:40px;
+  text-shadow:0 0 25px red;
+  animation:flicker 1s infinite alternate;
+}
+
+@keyframes flicker{
+  0%{opacity:.5;}
+  100%{opacity:1;}
+}
+
+/* Button */
+button{
+  padding:15px 35px;
+  font-size:18px;
+  background:black;
+  color:red;
+  border:2px solid red;
+  border-radius:12px;
+  cursor:pointer;
+  box-shadow:0 0 20px red;
+  transition:.3s;
+}
+
+button:hover{
+  background:red;
+  color:black;
+}
+
+/* Smoke overlay */
+.smoke{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:url("https://i.imgur.com/8IuucQZ.png");
+  opacity:.15;
+  animation:moveSmoke 30s linear infinite;
+}
+
+@keyframes moveSmoke{
+  from{background-position:0 0;}
+  to{background-position:1000px 0;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="smoke"></div>
+
+<h1>☠ Welcome To Darkness ☠</h1>
+
+<br>
+<button onclick="enterSite()">Enter If You Dare</button>
+
+<script>
+function enterSite(){
+  window.location.href="index.html";
+}
+</script>
+
+</body>
+</html>
